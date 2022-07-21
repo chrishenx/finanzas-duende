@@ -1,13 +1,21 @@
 {
-  "plugins": ["@typescript-eslint"],
+  "plugins": ["@typescript-eslint", "typescript-sort-keys","import", "sort-keys-fix", "sort-destructure-keys"],
   "extends": [
-    "next/core-web-vitals",
+    "plugin:import/typescript",
+    "plugin:import/recommended",
+    "plugin:import/errors",
+    "plugin:import/warnings",
+    "eslint:recommended",
     "plugin:react/recommended",
     "plugin:@typescript-eslint/recommended",
     "plugin:prettier/recommended",
-    "prettier"
+    "plugin:typescript-sort-keys/recommended",
+    "prettier",
+    "next/core-web-vitals"
   ],
   "rules": {
-    "react/react-in-jsx-scope": "off"
+    "react/react-in-jsx-scope": "off",
+    "sort-keys-fix/sort-keys-fix": "warn",
+    "sort-destructure-keys/sort-destructure-keys": "warn"
   }
 }
